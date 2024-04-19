@@ -14,9 +14,17 @@ function mostrarInvernaderos(data) {
     data.forEach(invernadero => {
         const invernaderoDiv = document.createElement('div');
         invernaderoDiv.innerHTML = `
-            <h2>${invernadero.nombre}</h2>
-            <p>Ubicación: ${invernadero.fecha}</p>
-            <p>Capacidad: ${invernadero.hora}</p>
+            <div class="card">
+                <div class="card-header">
+                Id: ${invernadero.id}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Nombre: ${invernadero.nombre}</p>
+                    <p class="card-text">Observación: ${invernadero.observaciones}</p>
+                    <p class="card-text">Fecha: ${invernadero.fecha}</p>
+                    <p class="card-text">Hora: ${invernadero.hora}</p>
+                </div>
+            </div>
         `;
         invernaderosDiv.appendChild(invernaderoDiv);
     });
